@@ -49,7 +49,7 @@ image_build:
     DOCKER_HOST: tcp://localhost:2375
   services:
     - name: docker:17.03-dind
-      command: ["--insecure-registry=registry.qikqiak.com"]
+#      command: ["--insecure-registry=registry.qikqiak.com"]
   script:
     - docker info
     - echo "${CI_REGISTRY_USER}"  "${CI_REGISTRY_PASSWORD}" "${CI_REGISTRY}" "${CI_REGISTRY_IMAGE}"
