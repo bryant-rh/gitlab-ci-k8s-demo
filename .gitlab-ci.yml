@@ -71,7 +71,6 @@ deploy_review:
     url: https://dev-gitlab-k8s-demo.qikqiak.com
     on_stop: stop_review
   script:
-    - sleep 60s
     - kubectl version
     - cd manifests/
     - sed -i "s/__CI_ENVIRONMENT_SLUG__/${CI_ENVIRONMENT_SLUG}/" deployment.yaml ingress.yaml service.yaml
